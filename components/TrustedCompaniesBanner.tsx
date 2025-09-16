@@ -56,17 +56,17 @@ export default function TrustedCompaniesBanner() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px] relative group"
+              className="flex items-center justify-center p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[160px] relative group"
             >
-              <div className="relative w-full h-16 flex items-center justify-center">
+              <div className="relative w-full h-24 flex items-center justify-center">
                 <img
                   src={company.logo}
                   alt={company.alt}
                   className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 rounded"
-                  width="200"
-                  height="80"
+                  width="300"
+                  height="120"
                 />
-                {/* Company name overlay for better identification - removed onClick handler */}
+                {/* Company name overlay for better identification */}
                 <div className="absolute inset-0 flex items-center justify-center bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded">
                   <span className="text-sm font-semibold text-secondary-800 text-center px-2">
                     {company.name}
