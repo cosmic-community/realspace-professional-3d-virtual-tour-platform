@@ -5,17 +5,17 @@ import { motion } from 'framer-motion'
 const trustedCompanies = [
   {
     name: 'HomeRealty',
-    logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop&auto=format,compress',
+    logo: 'https://imgix.cosmicjs.com/91e0c8c0-9306-11f0-8665-4b7a39b6c61a-tmp_20031_3-28-2023_122831_.png?w=400&h=200&fit=crop&auto=format,compress',
     alt: 'HomeRealty - Trusted Real Estate Partner'
   },
   {
     name: '616 Realty',
-    logo: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=200&fit=crop&auto=format,compress',
+    logo: 'https://imgix.cosmicjs.com/91aff4c0-9306-11f0-8665-4b7a39b6c61a-Logo-On-Any-Color-Translucent-Largest-300x169-1-png.webp?w=400&h=200&fit=crop&auto=format,compress',
     alt: '616 Realty - Michigan Real Estate Experts'
   },
   {
     name: 'Jaqua Realtors',
-    logo: 'https://images.unsplash.com/photo-1560472355-536de3962603?w=400&h=200&fit=crop&auto=format,compress',
+    logo: 'https://imgix.cosmicjs.com/aff25820-9305-11f0-8665-4b7a39b6c61a-79a43f1d6e2c21c5053b7cd0bb99eb31.png?w=400&h=200&fit=crop&auto=format,compress',
     alt: 'Jaqua Realtors - Professional Real Estate Services'
   },
   {
@@ -56,18 +56,18 @@ export default function TrustedCompaniesBanner() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px] relative"
+              className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px] relative group"
             >
               <div className="relative w-full h-16 flex items-center justify-center">
                 <img
                   src={company.logo}
                   alt={company.alt}
-                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 rounded"
+                  className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 rounded"
                   width="200"
                   height="80"
                 />
-                {/* Company name overlay for better identification */}
-                <div className="absolute inset-0 flex items-center justify-center bg-white/90 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded">
+                {/* Company name overlay for better identification - removed onClick handler */}
+                <div className="absolute inset-0 flex items-center justify-center bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded">
                   <span className="text-sm font-semibold text-secondary-800 text-center px-2">
                     {company.name}
                   </span>
