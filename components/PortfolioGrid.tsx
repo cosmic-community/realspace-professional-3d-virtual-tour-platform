@@ -65,6 +65,33 @@ const demoProjects: PortfolioProject[] = [
       results_metrics: 'Generated 25+ qualified leads, shortened sales cycle by 45%',
       featured_project: true
     }
+  },
+  {
+    id: 'demo-featured-example',
+    slug: 'featured-virtual-tour-example',
+    title: 'Featured Virtual Tour Example',
+    content: '',
+    type: 'portfolio-projects',
+    created_at: '2024-01-20',
+    modified_at: '2024-01-20',
+    metadata: {
+      project_title: 'Premium Virtual Tour Experience',
+      client_name: 'RealSpace GR Showcase',
+      project_type: {
+        key: 'residential',
+        value: 'Residential'
+      },
+      project_description: 'An exceptional virtual tour experience showcasing advanced 3D scanning technology and immersive walkthrough capabilities. This example demonstrates the high-quality virtual tours we create for our clients.',
+      square_footage: 3200,
+      project_date: '2024-01-20',
+      featured_image: {
+        url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=2000&auto=format,compress',
+        imgix_url: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=2000&auto=format,compress'
+      },
+      tour_embed_code: 'https://my.matterport.com/show/?m=QtX77UcQ8aX',
+      results_metrics: 'Enhanced online engagement by 250%, reduced in-person visits by 40%',
+      featured_project: true
+    }
   }
 ];
 
