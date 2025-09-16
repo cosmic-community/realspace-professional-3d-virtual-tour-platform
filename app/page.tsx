@@ -1,4 +1,5 @@
 import HeroSection from '@/components/HeroSection'
+import TrustedCompaniesBanner from '@/components/TrustedCompaniesBanner'
 import FeaturedServices from '@/components/FeaturedServices'
 import FeaturedProjects from '@/components/FeaturedProjects'
 import TestimonialsSection from '@/components/TestimonialsSection'
@@ -23,6 +24,7 @@ export default async function HomePage() {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <TrustedCompaniesBanner />
       <FeaturedServices services={featuredServices} />
       <FeaturedProjects projects={featuredProjects} />
       <TechnologyShowcase technologies={featuredTechnologies} />
