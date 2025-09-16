@@ -5,22 +5,22 @@ import { motion } from 'framer-motion'
 const trustedCompanies = [
   {
     name: 'HomeRealty',
-    logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop&auto=format,compress&bg=FFFFFF&overlay=FFFFFF&blend=normal&txt=HomeRealty&txt-size=32&txt-color=7CB342&txt-align=center,middle&txt-font=Helvetica',
+    logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop&auto=format,compress',
     alt: 'HomeRealty - Trusted Real Estate Partner'
   },
   {
     name: '616 Realty',
-    logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop&auto=format,compress&bg=FFFFFF&overlay=FFFFFF&blend=normal&txt=616%20REALTY&txt-size=28&txt-color=000000&txt-align=center,middle&txt-font=Helvetica',
+    logo: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=200&fit=crop&auto=format,compress',
     alt: '616 Realty - Michigan Real Estate Experts'
   },
   {
     name: 'Jaqua Realtors',
-    logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop&auto=format,compress&bg=FFFFFF&overlay=FFFFFF&blend=normal&txt=Jaqua%20Realtors&txt-size=28&txt-color=8B1538&txt-align=center,middle&txt-font=Helvetica',
+    logo: 'https://images.unsplash.com/photo-1560472355-536de3962603?w=400&h=200&fit=crop&auto=format,compress',
     alt: 'Jaqua Realtors - Professional Real Estate Services'
   },
   {
     name: 'Yoder Real Estate Team',
-    logo: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop&auto=format,compress&bg=FFFFFF&overlay=FFFFFF&blend=normal&txt=YODER%20REAL%20ESTATE&txt-size=24&txt-color=8B4513&txt-align=center,middle&txt-font=Helvetica',
+    logo: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400&h=200&fit=crop&auto=format,compress',
     alt: 'Yoder Real Estate Team - Trusted Property Specialists'
   }
 ]
@@ -56,15 +56,23 @@ export default function TrustedCompaniesBanner() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px]"
+              className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px] relative"
             >
-              <img
-                src={company.logo}
-                alt={company.alt}
-                className="max-w-full max-h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                width="200"
-                height="80"
-              />
+              <div className="relative w-full h-16 flex items-center justify-center">
+                <img
+                  src={company.logo}
+                  alt={company.alt}
+                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 rounded"
+                  width="200"
+                  height="80"
+                />
+                {/* Company name overlay for better identification */}
+                <div className="absolute inset-0 flex items-center justify-center bg-white/90 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded">
+                  <span className="text-sm font-semibold text-secondary-800 text-center px-2">
+                    {company.name}
+                  </span>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
